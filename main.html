@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RIVERA Indonesia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#222831",
+            secondary: "#393E46",
+            accent: "#00ADB5",
+            light: "#EEEEEE"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-primary text-light">
+
+  <!-- Navbar -->
+<header class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-md">
+  <div class="container mx-auto flex items-center justify-between p-4">
+    <h1 class="text-2xl font-bold text-accent">RIVERA</h1>
+    <div class="hidden md:flex space-x-8 font-medium">
+      <a href="#woman" class="hover:text-cyan-600">New Arrivals ▾</a>
+      <a href="#men" class="hover:text-cyan-600">Exclusive Collection</a>
+      <a href="#woman" class="hover:text-cyan-600">Wanita ▾</a>
+      <a href="#men" class="hover:text-cyan-600">Pria ▾</a>
+      <a href="#" class="hover:text-red-600 text-cyan-500">Sale ▾</a>
+      <a href="#bestsellers" class="hover:text-cyan-600">Best Sellers</a>
+    </div>
+    <!-- Right: Icons -->
+    <div class="flex items-center space-x-6 text-xl">
+      <!-- Search -->
+      <button class="hover:text-gray-600">🔍</button>
+      <!-- Wishlist -->
+      <div class="relative">
+        ❤️
+        <span class="absolute -top-2 -right-2 bg-gray-700 text-white text-xs rounded-full px-1">0</span>
+      </div>
+      <!-- Cart -->
+      <button class="hover:text-gray-600">🛍️</button>
+    </div>
+    <button class="md:hidden px-3 py-2 border rounded border-accent text-accent">☰</button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="relative h-[70vh] flex items-center justify-center bg-secondary">
+  <img src="https://static.vecteezy.com/system/resources/previews/023/459/254/non_2x/sport-shoes-background-illustration-ai-generative-free-photo.jpg" 
+       alt="Hero Shoe" 
+       class="absolute inset-0 w-full h-full object-cover" />
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative z-10 text-center">
+    <h2 class="text-4xl md:text-6xl font-bold text-white">Step Into Style</h2>
+    <p class="mt-4 text-lg text-gray-200">Trendy sneakers, sports shoes, and more</p>
+    <a href="#shop" 
+       class="mt-6 inline-block px-6 py-3 bg-accent rounded text-primary font-bold hover:opacity-90 transition">
+       Shop Now
+    </a>
+  </div>
+</section>
+
+<!-- About 1 -->
+<section class="container mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+  <!-- Left: Gambar -->
+  <div>
+    <img src="https://img.freepik.com/premium-psd/modern-running-shoes-sneakers-transparent-background_809796-5154.jpg" 
+         alt="RIVERA Artist Series Shoes" 
+         class="rounded-lg shadow-lg">
+  </div>
+
+  <!-- Right: Text -->
+  <div>
+    <h2 class="text-3xl font-light mb-4">RIVERA Hikking</h2>
+    <p class="text-justify text-cyan-500 mb-10">
+      Hiking boots aren't just ordinary footwear, but safety and comfort equipment for climbers. Combining strength, protection, and comfort, these shoes help keep your feet safe on difficult terrain and reduce the risk of injury.
+    </p>
+    <button class="px-6 py-2 border border-cyan-500 text-white hover:bg-cyan-500 hover:text-black transition">
+      Shop the collection
+    </button>
+  </div>
+</section>
+<!-- About 2 -->
+<section class="container mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+  
+  <!-- Left: Text -->
+  <div>
+    <h2 class="text-3xl font-light mb-4">RIVERA Running</h2>
+    <p class="text-justify text-cyan-500 mb-6">
+      Running shoes focus on speed, comfort, and performance on flat surfaces like roads or athletic tracks. Compared to hiking shoes, which prioritize strength and protection, running shoes are lighter and more flexible, supporting fast strides and reducing the risk of repetitive impact injuries.
+    </p>
+    <button class="px-6 py-2 border border-cyan-500 text-white hover:bg-cyan-500 hover:text-black transition">
+      Shop handbags
+    </button>
+  </div>
+
+  <!-- Right: Image -->
+  <div>
+    <img src="https://img.freepik.com/premium-psd/sport-running-shoes-sneakers-transparent-background_809796-5179.jpg" 
+         alt="Handbags" 
+         class="rounded-lg shadow-lg">
+  </div>
+</section>
+
+
+<!-- Product -->
+<style>
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .animated-gradient {
+    background: linear-gradient(135deg, #222831, #393E46, #00ADB5);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+  }
+</style>
+
+<!-- Product Card Daily-->
+<section id="bestsellers" class="container mx-auto py-10">
+  <!-- Judul -->
+      <div class="flex justify-between items-center mb-6">
+        <a id="men" class="text-3xl text-white">Shop Men's new arrivals</a>
+        <h2 class="text-3xl font-semibold text-gray-800">Men’s <span class="font-light">New Arrivals</span></h2>
+        <p class="text-white">Discover all-new spring arrivals for everything you’re doing</p>
+      </div>
+  <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+
+    <!-- 1 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/sport-running-shoes-sneakers-transparent-background_809796-5179.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-1</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 2 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/psd-premium-file-shoes-against-white-background-ai-generated_1031432-7356.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-2</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 3 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/psd-premium-file-shoes-against-white-background-ai-generated_1031432-7368.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-3</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 4 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/modern-running-shoes-sneakers-transparent-background_809796-5154.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-4</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 5 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-photo/running-shoes-sneakers-transparent-background_84443-2190.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-5</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+
+    <!-- 6 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/sport-running-shoes-sneakers-transparent-background_809796-5179.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-1</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 7 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/psd-premium-file-shoes-against-white-background-ai-generated_1031432-7356.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-2</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 8 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/psd-premium-file-shoes-against-white-background-ai-generated_1031432-7368.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-3</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 9 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/modern-running-shoes-sneakers-transparent-background_809796-5154.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-4</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 10 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-photo/running-shoes-sneakers-transparent-background_84443-2190.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-5</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    
+  </div>
+</section>
+<section id="bestsellers" class="container mx-auto py-10">
+  <!-- Judul -->
+      <div class="flex justify-between items-center mb-6">
+        <a id="woman" class="text-3xl text-white">Shop Woman's new arrivals</a>
+        <h2 class="text-3xl font-semibold text-gray-800">Men’s <span class="font-light">New Arrivals</span></h2>
+        <p class="text-white">Discover all-new spring arrivals for everything you’re doing</p>
+      </div>
+  <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+
+    <!-- 1 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/sport-running-shoes-sneakers-transparent-background_809796-5179.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-1</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 2 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/psd-premium-file-shoes-against-white-background-ai-generated_1031432-7356.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-2</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 3 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/psd-premium-file-shoes-against-white-background-ai-generated_1031432-7368.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-3</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 4 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/modern-running-shoes-sneakers-transparent-background_809796-5154.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-4</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 5 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-photo/running-shoes-sneakers-transparent-background_84443-2190.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-5</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    
+    <!-- 6 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/sport-running-shoes-sneakers-transparent-background_809796-5179.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-1</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 7 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/psd-premium-file-shoes-against-white-background-ai-generated_1031432-7356.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-2</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 8 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/psd-premium-file-shoes-against-white-background-ai-generated_1031432-7368.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-3</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 9 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-psd/modern-running-shoes-sneakers-transparent-background_809796-5154.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-4</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+    <!-- 10 -->
+    <a href="detailsalomon.html" class="animated-gradient rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition duration-500 hover:scale-105 hover:shadow-2xl block">
+      <div class="overflow-hidden">
+        <img src="https://img.freepik.com/premium-photo/running-shoes-sneakers-transparent-background_84443-2190.jpg"
+             alt="Nike Air Max"
+             class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </div>
+      <div class="p-3">
+        <p class="text-sm font-semibold line-clamp-2 text-white">RIVERA GTX-5</p>
+        <div class="mt-2 flex items-center space-x-2">
+          <span class="text-red-400 font-bold">Rp1.299.000</span>
+          <span class="text-xs line-through text-gray-200">Rp2.000.000</span>
+        </div>
+        <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded">-40%</span>
+        <p class="mt-1 text-xs text-gray-200">10RB+ terjual</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<footer class="bg-cyan-700 border-t py-10">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 sm:grid-cols-4 gap-8">
+    
+    <!-- Layanan Pelanggan -->
+    <div>
+      <h3 class="font-semibold mb-4">Layanan Pelanggan</h3>
+      <ul class="space-y-2 text-sm text-white">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Panduan Ukuran</a></li>
+        <li><a href="#">Pengembalian</a></li>
+        <li><a href="#">Kontak Kami</a></li>
+      </ul>
+    </div>
+
+    <!-- Tentang -->
+    <div>
+      <h3 class="font-semibold mb-4">Tentang</h3>
+      <ul class="space-y-2 text-sm text-white">
+      <li><a href="#">Tentang Kami</a></li>
+        <li><a href="#">RIVERA Group</a></li>
+        <li><a href="#">Store Locator</a></li>
+        <li><a href="#">Syarat dan Ketentuan</a></li>
+        <li><a href="#">Kebijakan Privasi</a></li>
+        <li><a href="#">Keberlanjutan Lingkungan</a></li>
+      </ul>
+    </div>
+
+
+    <!-- Explore More -->
+    <div>
+      <h3 class="font-semibold mb-4">Explore More</h3>
+      <ul class="space-y-2 text-sm text-white">
+        <li><a href="#">Sepatu Wanita</a></li>
+        <li><a href="#">Sepatu Pria</a></li>
+        <li><a href="#">Sepatu Hikking</a></li>
+        <li><a href="#">Sepatu Running</a></li>
+      </ul>
+    </div>
+
+    <!-- Payment Method -->
+    <div>
+      <h3 class="font-semibold mb-4">Payment Method</h3>
+      <div class="flex space-x-3">
+        <img src="https://clipground.com/images/bca-logo-8.gif" alt="BCA" class="h-8">
+        <img src="https://dcamelfastferry.com/assets/img/payments/bni.svg" alt="BNI" class="h-8">
+        <img src="https://i.pinimg.com/originals/aa/0e/67/aa0e67d2e759af6d677088e9160784d1.jpg" alt="BRI" class="h-8">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.r5sYApTTTbyEUDIHTLlYswHaCR?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Visa" class="h-8">
+        <img src="https://wallpapercat.com/w/full/4/3/1/1254953-3840x2160-desktop-4k-mastercard-wallpaper-image.jpg" alt="Mastercard" class="h-8">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.dIXYnJX-9WPxpwYYAEiJTQHaFP?w=1280&h=907&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Mandiri" class="h-8">
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="flex justify-between items-center mt-10 px-6 max-w-7xl mx-auto">
+    <div class="flex items-center space-x-2">
+      <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-facebook"></i></a>
+    </div>
+    <button class="fixed bottom-6 right-6 bg-black text-white p-4 rounded-full shadow-lg">
+      <img src="https://cdn.shopify.com/s/files/1/0549/3863/2420/files/chaticon.png?v=1680166167" alt="Chat" class="h-10 w-10">
+    </button>
+  </div>
+</footer>
+
+
+  <!-- Footer -->
+  <footer class="bg-secondary text-gray-300 py-6 mt-12">
+    <div class="container mx-auto text-center">
+      <p>© 2025 ShoeStore. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
