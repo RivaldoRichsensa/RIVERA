@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShoeStore | E-Commerce</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#222831",
+            secondary: "#393E46",
+            accent: "#00ADB5",
+            light: "#EEEEEE"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-br from-[#222831] via-[#393E46] to-[#00ADB5] min-h-screen font-sans">
+  
+<div class="container mx-auto py-10">
+
+  <!-- Navbar -->
+   <nav class="fixed top-0 left-0 w-full z-50 bg-transparent">
+  <div class="container mx-auto px-6 flex items-center justify-between py-3 text-white">
+    <h1 class="text-2xl font-bold text-accent">ShoeStore</h1>
+
+    <!-- Center: Search Bar -->
+    <div class="flex-1 mx-6">
+      <div class="relative w-full">
+        <input type="text" placeholder="Cari produk..." 
+               class="w-full rounded-lg pl-10 pr-4 py-2 text-white placeholder-gray-300 
+                      bg-white/20 backdrop-blur-md border border-white/30 
+                      focus:ring-2 focus:ring-cyan-400 focus:outline-none">
+      </div>
+    </div>
+
+    <!-- Right: Icons + Profile -->
+    <div class="flex items-center space-x-6">
+      <!-- Cart -->
+      <div class="relative cursor-pointer">
+        🛒
+        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-2">13</span>
+      </div>
+    </div>
+  </div>
+</nav>
+    <!-- Card Detail Produk -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 bg-white/10 backdrop-blur-md rounded-xl shadow-xl p-8 min-h-[800px]">
+
+      <!-- Left: Gambar Produk -->
+      <div>
+        <img id="mainImage" 
+          src="https://size.ca/cdn/shop/files/L47450600_SalomonSportstyleXT-6GTXBlackBlack-FtwSilver_4_900x.jpg?v=1719400314" 
+          alt="Nike Air Max" 
+          class="w-full h-[550px] object-contain rounded-lg border">
+
+        <!-- Thumbnails -->
+        <div class="flex mt-4 space-x-3">
+          <img onclick="changeImage(this)" 
+               src="https://i8.amplience.net/i/jpl/sz_692464_e?qlt=92&w=750&h=580&v=1&fmt=auto"
+               class="w-20 h-20 object-cover cursor-pointer border-2 border-red-500 rounded">
+          <img onclick="changeImage(this)" 
+               src="https://size.ca/cdn/shop/files/L47450600_SalomonSportstyleXT-6GTXBlackBlack-FtwSilver_4_900x.jpg?v=1719400314"
+               class="w-20 h-20 object-cover cursor-pointer rounded hover:border-red-500">
+          <img onclick="changeImage(this)" 
+               src="https://size.ca/cdn/shop/files/L47450600_SalomonSportstyleXT-6GTXBlackBlack-FtwSilver_3_900x.jpg?v=1719400314"
+               class="w-20 h-20 object-cover cursor-pointer rounded hover:border-red-500">
+        </div>
+      </div>
+
+      <!-- Right: Detail Produk -->
+      <div>
+        <h2 class="text-2xl font-bold">Salomon XT-6 GTX Black Silver</h2>
+        <div class="flex items-center mt-2 space-x-2">
+          <span class="text-yellow-400">★★★★★</span>
+          <span class="text-sm text-gray-500">999 Penilaian • 1RB+ Terjual</span>
+        </div>
+
+        <div class="mt-4">
+          <span class="text-3xl font-bold text-red-600">Rp3.200.000</span>
+          <span class="text-lg line-through text-gray-400 ml-2">Rp4.000.000</span>
+        </div>
+
+        <!-- Ukuran -->
+        <div>
+  <h3 class="font-semibold mb-3">Pilih Ukuran:</h3>
+  <div class="flex flex-wrap gap-3" id="sizeOptions">
+    <button onclick="selectSize(this)" 
+            class="px-5 py-3 border rounded hover:border-red-500 transition">38</button>
+    <button onclick="selectSize(this)" 
+            class="px-5 py-3 border rounded hover:border-red-500 transition">39</button>
+    <button onclick="selectSize(this)" 
+            class="px-5 py-3 border rounded hover:border-red-500 transition">40</button>
+    <button onclick="selectSize(this)" 
+            class="px-5 py-3 border rounded hover:border-red-500 transition">41</button>
+    <button onclick="selectSize(this)" 
+            class="px-5 py-3 border rounded hover:border-red-500 transition">42</button>
+    <button onclick="selectSize(this)" 
+            class="px-5 py-3 border rounded hover:border-red-500 transition">43</button>
+  </div>
+</div>
+
+<script>
+  function selectSize(el) {
+    // reset semua tombol
+    document.querySelectorAll("#sizeOptions button").forEach(btn => {
+      btn.classList.remove("bg-red-500", "text-white", "border-red-500");
+      btn.classList.add("border", "text-black");
+    });
+    // aktifkan tombol yg diklik
+    el.classList.add("bg-red-500", "text-white", "border-red-500");
+  }
+</script>
+
+        <!-- Tombol -->
+        <div class="mt-8 flex gap-4">
+          <button class="flex-1 bg-cyan-700 text-white py-3 rounded-lg hover:bg-cyan-800 transition">Masukkan Keranjang</button>
+          <button class="flex-1 bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition">Beli Sekarang</button>
+        </div>
+      </div>
+    </div>
+
+  <script>
+    function changeImage(el) {
+      document.getElementById("mainImage").src = el.src;
+      document.querySelectorAll("div.flex img").forEach(img => img.classList.remove("border-red-500"));
+      el.classList.add("border-red-500");
+    }
+  </script>
+</body>
